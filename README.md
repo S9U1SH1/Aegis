@@ -39,4 +39,5 @@ The system consists of three main components:
    - Provides real-time visibility
    - Displays alerts, logs, and reports
 
+<img width="1259" height="693" alt="image" src="https://github.com/user-attachments/assets/499b1a65-2cc7-40cc-9d8c-fcb318f911e2" />
 
