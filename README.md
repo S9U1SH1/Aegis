@@ -46,8 +46,9 @@ This is the secure gateway for authorized personnel to access the monitoring dat
 
 <img width="1259" height="693" alt="image" src="https://github.com/user-attachments/assets/499b1a65-2cc7-40cc-9d8c-fcb318f911e2" />
 
-## Security Dashboard
+## Aegis Agent Dashboard
 The central interface for viewing system-wide logs, alerts, and security trends.
+
 <img width="1403" height="526" alt="image" src="https://github.com/user-attachments/assets/6c7f9950-baa8-4dee-aa5a-8900c7915489" />
 <img width="1401" height="418" alt="image" src="https://github.com/user-attachments/assets/27612e09-8fa7-4669-a285-9dee852e82df" />
 
