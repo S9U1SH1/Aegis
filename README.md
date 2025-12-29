@@ -2,3 +2,41 @@
 
 An open-source Windows security monitoring system that provides real-time
 visibility into endpoint security events through a centralized web-based dashboard.
+
+## Overview
+
+Cyber threats targeting Windows systems continue to increase in frequency
+and sophistication. Many existing security monitoring solutions are either
+enterprise-focused, expensive, or overly complex for small and medium-sized
+environments.
+
+This project introduces a lightweight, open-source Windows security monitoring
+agent that collects critical security events and securely transmits them to a
+centralized web-based dashboard for analysis and visualization.
+
+## Objectives
+
+- Monitor Windows Firewall and Antivirus status
+- Detect suspicious processes and injected binaries
+- Track failed login attempts
+- Monitor critical Windows Registry modifications
+- Identify outbound network connections and open ports
+- Provide a centralized dashboard for visualization and reporting
+
+## System Architecture
+
+The system consists of three main components:
+
+1. **Windows Security Agent**
+   - Runs in the background on Windows endpoints
+   - Collects security-related data at optimized intervals
+
+2. **Centralized Server**
+   - Receives encrypted data from agents
+   - Stores events in a relational database
+
+3. **Web-Based Dashboard**
+   - Provides real-time visibility
+   - Displays alerts, logs, and reports
+
+
