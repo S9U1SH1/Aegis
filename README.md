@@ -61,7 +61,7 @@ Aegis provides a robust suite of monitoring tools designed to offer full visibil
 * **Firewall Status Verification:** Periodically monitors the state of Windows Firewall across Domain, Private, and Public profiles to detect misconfigurations.
 * **Registry Integrity Monitoring:** Inspects critical registry keys (Secure Boot, UAC, LSASS) to detect unauthorized changes indicating malware persistence or privilege escalation.
 * **Failed Login Tracking:** Analyzes Windows Security Event Logs (Event ID 4625) to detect and report failed local or remote authentication attempts.
-* **Binary Trust Verification:** Evaluates the digital signatures of running executables using Microsoft’s Sigcheck to identify untrusted or suspicious binaries — and yes, that includes your **totally legal** cracked software.
+* **Binary Trust Verification:** Evaluates the digital signatures of running executables using Microsoft’s Sigcheck to identify untrusted or suspicious binaries — and yes, that includes your **"totally legal"** cracked software.
 * **Suspicious Process Detection:** Analyzes process creation events and parent-child relationships (e.g., `explorer.exe` spawning `cmd.exe`) to flag potential exploits.
 
 ### 🌐 Network & Process Oversight
