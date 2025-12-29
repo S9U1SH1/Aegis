@@ -71,3 +71,27 @@ Aegis provides a robust suite of monitoring tools designed to offer full visibil
 * **Role-Based Access Control:** Implements user authentication to differentiate between regular users and administrators.
 * **Automated Setup & Persistence:** Includes a dedicated setup module that configures the environment and schedules the agent to run automatically with high privileges.
 * **Customizable Security Reports:** Allows for the generation of filtered reports based on user, time frame, and security metrics.
+
+## 📦 Installation & Setup
+
+Aegis is designed for a streamlined deployment. The process involves downloading the core package, running the setup with administrative rights, and initializing your secure credentials.
+
+### 1. Prerequisites
+* **Operating System:** Microsoft Windows 10 or above.
+* **Privileges:** Administrator rights are required to run the setup and to allow the agent to monitor protected system registries and logs.
+* **Dependencies:** The setup script automatically manages the deployment of `Sigcheck64.exe` for binary verification.
+
+### 2. Installation Steps
+1. **Download the Package:** Click the "Download Windows Installer" button on the dashboard. This will download a package containing the `setup.exe` and necessary project files.
+2. **Run Setup as Administrator:** Open the downloaded folder, right-click `setup.exe`, and select **"Run as administrator"**. This is essential for the installer to create the required system directories.
+3. **Automated Environment Preparation:** The installer will automatically:
+    * Create the permanent application directory at `C:\ProgramData\Aegis`.
+    * Initialize configuration files, event log checkpoints, and cryptographic keys.
+    * Relocate the agent executable and Sigcheck to the trusted application path.
+4. **Configure Your Credentials:** When prompted by the setup window, enter your **Email** and **Password**. These credentials are encrypted and stored locally to securely authenticate your device with the central server.
+
+### 3. Background Persistence
+Once the setup reports "Setup complete," no further manual action is required:
+* **Task Scheduler:** The installer creates a Windows Scheduled Task to launch the agent automatically every time a user logs on.
+* **Highest Privileges:** The agent is configured to run with the highest privileges to ensure it can monitor all security subsystems without interruption.
+* **Multi-threaded Execution:** The agent operates silently in the background, using separate threads to monitor different security components (Antivirus, Firewall, Registry, etc.) simultaneously.
