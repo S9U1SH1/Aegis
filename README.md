@@ -1,5 +1,7 @@
 # Aegis – Windows Security Monitoring Agent
 
+*Live Dashboard:** [https://aegis-security-solutions.com/](https://aegis-security-solutions.com/)
+
 An open-source Windows security monitoring system that provides real-time
 visibility into endpoint security events through a centralized web-based dashboard.
 
