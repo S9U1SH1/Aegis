@@ -28,7 +28,8 @@ from log import read_and_remove_first_log
 
 # ----------------- App dir -----------------
 APP_DIR = os.path.abspath(os.environ.get("APP_DIR", r"C:\ProgramData\Aegis"))
-
+time.sleep(2)
+print("1")
 
 # Ensure APP_DIR exists early
 try:
@@ -105,14 +106,14 @@ def _cfg_url(name: str, default: str) -> str:
 SUBMIT_URL = _cfg_url("SUBMIT_URL", "https://aegis-security-solutions.com/submit")
 
 READ_LOG_TIME_DELAY          = _cfg_float("READ_LOG_TIME_DELAY",          5, 0.1, 3600.0)
-CRITICAL_REG_DELAY_TIME      = _cfg_float("CRITICAL_REG_DELAY_TIME",      20.0, 0.1, 3600.0)
-FIREWALL_STATUS_DELAY_TIME   = _cfg_float("FIREWALL_STATUS_DELAY_TIME",   20.0, 0.1, 3600.0)
-FAILED_LOGINS_DELAY_TIME     = _cfg_float("FAILED_LOGINS_DELAY_TIME",     20.0, 0.1, 3600.0)
-ANTIVIRUS_STATUS_DELAY_TIME  = _cfg_float("ANTIVIRUS_STATUS_DELAY_TIME",  20.0, 0.1, 3600.0)
-PORTS_STATUS_DELAY_TIME      = _cfg_float("PORTS_STATUS_DELAY_TIME",      20.0, 0.1, 3600.0)
-OUTBOUND_STATUS_DELAY_TIME   = _cfg_float("OUTBOUND_STATUS_DELAY_TIME",   20.0, 0.1, 3600.0)
-SUSPROC_STATUS_DELAY_TIME    = _cfg_float("SUSPROC_STATUS_DELAY_TIME",    20.0, 0.1, 3600.0)
-BINARY_CHECKER_DELAY_TIME    = _cfg_float("BINARY_CHECKER_DELAY_TIME",    180.0, 0.5, 3600.0)
+CRITICAL_REG_DELAY_TIME      = _cfg_float("CRITICAL_REG_DELAY_TIME",      60.0, 0.1, 3600.0)
+FIREWALL_STATUS_DELAY_TIME   = _cfg_float("FIREWALL_STATUS_DELAY_TIME",   60.0, 0.1, 3600.0)
+FAILED_LOGINS_DELAY_TIME     = _cfg_float("FAILED_LOGINS_DELAY_TIME",     60.0, 0.1, 3600.0)
+ANTIVIRUS_STATUS_DELAY_TIME  = _cfg_float("ANTIVIRUS_STATUS_DELAY_TIME",  60.0, 0.1, 3600.0)
+PORTS_STATUS_DELAY_TIME      = _cfg_float("PORTS_STATUS_DELAY_TIME",      60.0, 0.1, 3600.0)
+OUTBOUND_STATUS_DELAY_TIME   = _cfg_float("OUTBOUND_STATUS_DELAY_TIME",   60.0, 0.1, 3600.0)
+SUSPROC_STATUS_DELAY_TIME    = _cfg_float("SUSPROC_STATUS_DELAY_TIME",    60.0, 0.1, 3600.0)
+BINARY_CHECKER_DELAY_TIME    = _cfg_float("BINARY_CHECKER_DELAY_TIME",    60.0, 0.5, 3600.0)
 
 AGENT_ERR_RATE_WINDOW = _cfg_float("AGENT_ERR_RATE_WINDOW", 60.0, 5.0, 600.0)
 

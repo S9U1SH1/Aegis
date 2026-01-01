@@ -202,17 +202,19 @@ _ensure_file_exists_with_mode(DATA_LOG_FILE)
 
 # ---------- Device identity (added to every record) ----------
 _device_cache = {}
+
 def _device_identity():
-    """Resolve once per process; robust fallbacks."""
-    if _device_cache:
+    # If we already have a non-loopback IP, reuse it
+    if _device_cache and _device_cache.get("DeviceIP") != "127.0.0.1":
         return _device_cache
+
     try:
         name = socket.gethostname() or "unknown"
     except Exception:
         name = "unknown"
+
     ip = "127.0.0.1"
     try:
-        # UDP connect trick (no traffic sent) to get primary outbound IP
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
             s.connect(("8.8.8.8", 80))
@@ -221,6 +223,7 @@ def _device_identity():
             s.close()
     except Exception:
         pass
+
     _device_cache.update({"DeviceName": name, "DeviceIP": ip})
     return _device_cache
 
